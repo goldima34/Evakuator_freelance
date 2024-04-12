@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- swiper -->
+    <link rel="stylesheet" href="style.css">
+    <title>Евакуатор-маніпулятор</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <img class="navbar__logo-img" src="img/logo.png">
+            <h1 class="navbar__logo-text">Евакуатор-маніпулятор</h1>
+        </div>
+        <h2 class="navbar__city">м.Житомир та область</h2>
+        <h3 class="navbar__text">ДОСТУПНІ ЦІНИ / ШВИДКА ПОДАЧА</h3>
+        <div class="navbar__number">
+            <button class="navbar__number-btn1 small-btn">
+                <img src="img/phone-call.png">
+                <a href="tel:+38(097)716-39-44">+38(097)716-39-44</a>
+            </button>
+            <button class="navbar__number-btn2 small-btn">
+                <img src="img/phone-call.png">
+                <a href="tel:+38(050)463-26-10">+38(050)463-26-10</a>
+            </button>
+        </div>
+    </nav>
+
+    <main class="main">
+        <div class="swiper__wrapper">
+            <div class="swiper mySwiper firstSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide img-1"></div>
+                    <div class="swiper-slide img-2"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="swiper mySwiper secondSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide img-3"></div>
+                    <div class="swiper-slide img-4"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <article class="mainText__wrapper">
+            Ми надаємо послуги евакуатора, маніпулятора по Житомиру, Житомирській області (по домовленності по Україні).
+            Будь які роботи маніпулятора, погрузка авто після дтп, перевезення споруд, будівельних матеріалів,
+            генераторів піддонів
+            з блоками, автомобілів, тракторів, комбайнів, біг-беги, сівалки і багато іншого (домовлятися і уточнювати по
+            телефону)
+            Будь які перевезення евакуатором автомобілів (з'їхавших з колії, в кувет, не справних, після дтп та інше)
+        </article>
+
+        <div class="swiper__wrapper">
+            <div class="swiper mySwiper firstSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide img-5"></div>
+                    <div class="swiper-slide img-6"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="swiper mySwiper secondSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide img-7"></div>
+                    <div class="swiper-slide img-8"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            speed: 800,
+            autoplay: {
+                delay: 2000, // Время между переключениями в миллисекундах
+                reverse: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            mousewheel: false,
+            keyboard: true,
+        });
+    </script>
+</body>
+
+</html>
