@@ -18,8 +18,10 @@
             <img class="navbar__logo-img" src="img/logo.png">
             <h1 class="navbar__logo-text">Евакуатор-маніпулятор</h1>
         </div>
-        <h2 class="navbar__city">м.Житомир та область</h2>
-        <h3 class="navbar__text">ДОСТУПНІ ЦІНИ / ШВИДКА ПОДАЧА</h3>
+        <div class="navbar__textWrapper">
+            <h2 class="navbar__textWrapper-city">м.Житомир та область</h2>
+            <h3 class="navbar__textWrapper-text">ДОСТУПНІ ЦІНИ / ШВИДКА ПОДАЧА</h3>
+        </div>
         <div class="navbar__number">
             <button class="navbar__number-btn1 small-btn">
                 <img src="img/phone-call.png">
@@ -78,6 +80,12 @@
             </div>
         </div>
     </main>
+    <div class="button__container">
+        <button class="button__container-btn">
+            <img class="button__container-btn-img" src="img/phone.png">
+            зателефонувати
+        </button>
+    </div>
 
     <script>
         var swiper = new Swiper(".mySwiper", {
@@ -95,6 +103,9 @@
             },
             mousewheel: false,
             keyboard: true,
+            cssMode: true, 
+            centeredSlides: true, // Enable centering of slides
+            slidesPerView: 1,
         });
     </script>
 </body>

@@ -1,22 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import "navbar";
 @import "_swiper";
+@import "colors";
+@import "media-queries";
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: "Oswald", sans-serif;
 }
 
-.main{
-    display: flex;
-    padding: 1rem calc((100vw - 1400px) / 2);
-    justify-content: space-between;
+:root {
+    background-color: $orange;
 }
 
-.mainText__wrapper{
+.main {
+    display: flex;
+    padding: 1.5rem calc((100vw - 1400px) / 2);
+    justify-content: space-between;
+    @include desktop {
+        display: block;
+    }
+}
+
+.mainText__wrapper {
     background-color: $dark;
+    display: flex;
     padding: 1rem;
     margin: 0 1rem;
     border-radius: 10px;
+    font-size: 1.8rem;
+    text-align: center;
+    align-items: center;
+    color: $orange;
+
+    @include desktop {
+        font-size: 1.5rem;
+    }
+    @include mobile {
+        font-size: 1rem;
+    }
+}
+
+.button__container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+    &-btn {
+        height: 60px;
+        width: 350px;
+        border: none;
+        border-radius: 30px;
+        background-color: $dark;
+        color: $orange;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.8rem;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 700;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $red;
+            color: $light;
+            transition:
+                background-color 0.3s ease,
+                color 0.3s ease;
+        }
+
+        &-img {
+            width: 25px;
+            padding: 5px;
+        }
+    }
+    @include mobile {
+        margin-top: -20px;
+        margin-bottom: 20px;
+    }
 }

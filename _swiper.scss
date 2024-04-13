@@ -1,16 +1,19 @@
+@import "media-queries";
+
 .mySwiper {
     width: 443px;
     height: 280px;
     border: 5px solid $dark;
+
+    @include mobile {
+        width: 300px;
+        height: 280px;
+    }
 }
 
 .img-slider {
     width: 443px;
     height: 280px;
-}
-
-.secondSwiper {
-    margin-top: 20px;
 }
 
 .img-1 {
@@ -22,11 +25,11 @@
 }
 
 .img-3 {
-    background-image: url(img/3.jpg);
+    background-image: url(img/9.jpg);
 }
 
 .img-4 {
-    background-image: url(img/4.jpg);
+    background-image: url(img/10.jpg);
 }
 
 .img-5 {
@@ -43,4 +46,46 @@
 
 .img-8 {
     background-image: url(img/8.jpg);
+}
+
+.swiper-slide {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.swiper__wrapper {
+    @include desktop {
+        display: flex;
+        box-sizing: border-box;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    @include mobile {
+        flex-direction: column;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+    }
+}
+
+.firstSwiper {
+    @include desktop {
+        margin-left: 20px;
+    }
+    @include mobile {
+        margin: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.secondSwiper {
+    margin-top: 80px;
+    @include desktop {
+        margin: 0;
+    }
+    @include mobile {
+        margin: 10px;
+    }
 }
